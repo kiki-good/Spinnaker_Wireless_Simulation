@@ -1,0 +1,52 @@
+#include <time.h>
+#include <stdio.h>
+#include "SpnMiscTypes.h"
+#include "SpnTypes.h"
+
+/* inclue Spinnaker library */
+#include "spinnaker.h"
+#include "spin1_api.h"
+#include "spin1_api_params.h"
+#include "sark.h"
+
+spnClock GetSystemClock()
+{
+	/* TO DO */
+	/* return clock();*/
+	return 0;
+}
+
+void sleepWrapper(sUint32_t seconds)
+{
+	/* TO DO */
+	/* sleep(seconds); */
+}
+
+void highResolutionSleepWrapper(sUint32_t seconds,sUint32_t naoSeconds)
+{
+	/* TO DO */
+	/*
+	struct timespec ts;
+
+	ts.tv_sec = seconds;
+	ts.tv_nsec = naoSeconds;
+	
+	nanosleep(&ts, NULL);
+	*/
+}
+
+void getTimeWrapper(sUint32_t *uSecond)
+{
+	/* TO DO */
+	/*
+	struct timeval start;
+
+	gettimeofday(&start, NULL);
+	*uSecond = start.tv_sec * 1000000 + start.tv_usec; 
+	*/
+}
+
+void delayWrapper(sUint32_t seconds)
+{
+	spin1_delay_us(seconds*1000000);
+}
