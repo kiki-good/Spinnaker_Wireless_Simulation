@@ -1,0 +1,134 @@
+ybug 192.168.240.253
+app_load Packet_Processing_Test.aplx . 1 16
+
+app_load Packet_Processing_Test.aplx . 2 16
+
+app_load Packet_Processing_Test.aplx all 1-16 16
+
+app_sig all 16 sync0
+
+app_load heat_demo.aplx all 1-16 16
+
+app_load heat_demo.aplx all 1-17 17
+
+app_load heat_demo.aplx . 1 16
+
+iptag . 255 1
+
+
+app_load heat_demo.aplx 0 . 1 1
+
+SDP message:
+1. inner communication test:
+src_inter_sId "0,1,1" ==> dest_inter_sId "0,1,2":
+
+sp 0 1
+app_load SDP_Message.aplx . 1 16
+app_load SDP_Message.aplx . 2 16
+
+2. Innter communication test
+src_inter_sId "0,1,2" ==> dest_inter_sId "1,0,3"
+
+sp 0 1
+
+app_load SDP_Message.aplx . 2 16
+
+sp 1 0
+
+app_load SDP_Message.aplx . 3 16
+
+
+Multicast message:
+1.     (0,1,1) ==> (0,1,4)
+sp 0 1
+app_load Packet_Processing_Test.aplx . 1 16 (Send)
+app_load Packet_Processing_Test.aplx . 4 16 (Receive)
+
+2.     (0,1,4) ==> (1,1,1)
+
+sp 0 1
+app_load Packet_Processing_Test.aplx . 4 16 (Send)
+
+sp 1 1
+app_load Packet_Processing_Test.aplx . 1 16 (Receive)
+
+3.     (0,1,1) ==> (1,1,2)
+sp 0 1
+app_load Packet_Processing_Test.aplx . 1 16 (Send)
+
+sp 1 1
+app_load Packet_Processing_Test.aplx . 2 16 (Receive)
+
+
+
+
+SDP Message Test:
+1. inner communication test:
+src_inter_sId "0,1,1" ==> dest_inter_sId "0,1,2":
+
+sp 0 1
+app_load SDP_TestCase_1.aplx . 1 16
+app_load SDP_TestCase_1.aplx . 2 16
+
+
+2. inner communication test with hr timer
+
+src_inter_sId "0,1,1" ==> dest_inter_sId "0,1,2":
+
+sp 0 1
+app_load SDP_TestCase_2.aplx . 1 16
+app_load SDP_TestCase_2.aplx . 2 16
+
+3. innter communication test with hr timer
+
+src_inter_sId "0,1,2" ==> dest_inter_sId "1,0,3"
+
+sp 0 1
+
+app_load SDP_TestCase_3.aplx . 2 16
+
+sp 1 0
+
+app_load SDP_TestCase_3.aplx . 3 16
+
+4. innter overload communication test
+
+src_inter_sId "0,1,2" ==> dest_inter_sId "1,0,3"
+
+sp 0 1
+
+app_load SDP_TestCase_4.aplx . 2 16
+
+sp 1 0
+
+app_load SDP_TestCase_4.aplx . 3 16
+
+5. Temp test....
+
+
+inter:
+src_inter_sId "0,1,2" ==> dest_inter_sId "1,0,3"
+
+sp 0 1
+
+app_load SDP_TestCase_5.aplx . 2 16
+
+sp 1 0
+
+app_load SDP_TestCase_5.aplx . 3 16
+
+inner:
+
+src_inter_sId "0,1,1" ==> dest_inter_sId "0,1,2":
+sp 0 1
+app_load SDP_TestCase_5.aplx . 1 16
+app_load SDP_TestCase_5.aplx . 2 16
+
+  io_printf (IO_BUF, "INIT: Allocate NUM[%d] SDP packet\n",sark_vec->num_msgs);
+
+
+
+
+
+
+

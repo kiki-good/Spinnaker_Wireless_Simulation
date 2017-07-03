@@ -1,0 +1,95 @@
+sudo VBoxClient --clipboard
+
+Run Eclipse:
+./eclipse -vm /home/jmqiao/Downloads/jre1.7.0_65/bin/
+
+hg clone ssh://jmqiao@kikigood.ddns.net/Desktop/Video_Decoder_Project/Video_Decoder_Engine_Main
+
+moodle:
+UserName:mbaxkjq2
+Password:TTAtta535482_
+
+kikigood11cs@gmail.com
+
+ssh -X mcore48.cs.man.ac.uk -l mbaxkjq2
+130.88.199.18
+
+gfortran
+. /local/COMP60611/utils/mcore48_vars.sh 
+qsub
+
+qstat -u '*'
+
+grep -A 2 "Timer 'series' information" mandel.sct.o16854 | grep "Total Time" | awk '{print $3}'
+
+paste -d" " file1.txt file2.txt
+
+
+http://docs.oracle.com/cd/E19957-01/805-4939/z4000736922f/index.html
+8 bytes of storage
+
+
+gcc -o Test_Code Test_Code.c C-SNZI.c -lpthread
+
+
+Spinnaker Running:
+
+export PATH=$PATH:/home/jmqiao/Desktop/Spinake_Project/arm-2013.05/bin/
+export PATH=$PATH:/home/jmqiao/Desktop/Spinake_Project/alpha_package_updated/spinnaker_tools/tools
+export PERL5LIB=/home/jmqiao/Desktop/Spinake_Project/alpha_package_updated/spinnaker_tools/tools/
+
+
+
+Update:
+
+export PATH=$PATH:/home/jmqiao/Desktop/Update_Spinake_Project/spinnaker_tools-master/tools/
+export PERL5LIB=/home/jmqiao/Desktop/Update_Spinake_Project/spinnaker_tools-master/tools/
+export SPINN_PATH=/home/jmqiao/Desktop/Update_Spinake_Project/spinnaker_tools-master/boot/
+
+
+
+Compile step:
+A.Compile lib:
+
+1.source ./setup
+
+2.export PATH=$PATH:/home/jmqiao/Desktop/Update_Spinake_Project/Test_Case/Design_v1.0/toolchain/arm-2013.05/bin
+
+3.export PATH=$PATH:/home/jmqiao/Desktop/Update_Spinake_Project/Test_Case/Design_v1.0/portinginterface/spinnaker_tools-master/tools/
+
+4.export PERL5LIB=/home/jmqiao/Desktop/Update_Spinake_Project/Test_Case/Design_v1.0/portinginterface/spinnaker_tools-master/tools/
+
+5.export SPINN_PATH=/home/jmqiao/Desktop/Update_Spinake_Project/Test_Case/Design_v1.0/portinginterface/spinnaker_tools-master/boot/
+
+tubotron &
+
+ybug 192.168.240.253
+
+boot scamp.boot spin3.conf (Must Run)
+
+app_load hello.aplx . 1 16
+
+iobuf 1
+
+app_stop 16
+
+ps
+
+quit
+
+simple.o: In function `flip_led':
+simple.c:(.text+0x2a): undefined reference to `spin1_stop'
+simple.o: In function `app_init':
+simple.c:(.text+0x17c): undefined reference to `spin1_set_mc_table_entry'
+simple.o: In function `c_main':
+simple.c:(.text+0x384): undefined reference to `spin1_application_core_map'
+collect2: error: ld returned 1 exit status
+
+
+
+
+
+
+
+
+
